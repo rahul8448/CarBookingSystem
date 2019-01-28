@@ -23,8 +23,6 @@ public class CarReservationTest {
 
         List<Car> smallCarsList = new ArrayList<Car>();
         Car c1 = new Car(Constants.TYPE.SMALL);
-        Car c2 = new Car(Constants.TYPE.SMALL);
-        Car c3 = new Car(Constants.TYPE.SMALL);
         smallCarsList.add(c1);
 
         List<Car> mediumCarsList = new ArrayList<Car>();
