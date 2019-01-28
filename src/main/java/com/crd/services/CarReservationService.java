@@ -30,7 +30,7 @@ public class CarReservationService {
     }
 
     /**
-     * This is for doing a single reservation.
+     * This method is for booking a single reservation.
      *
      * @param bookingDetails
      * @param car

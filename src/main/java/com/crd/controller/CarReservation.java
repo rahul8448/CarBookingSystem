@@ -15,11 +15,11 @@ import java.util.*;
 public class CarReservation {
 
 
-    //Stores the details about list of small cars
+    //Stores the details about small cars
     private final Map<Integer, Car> smallCarsMap;
-    //Stores the details about list of medium cars
+    //Stores the details about medium cars
     private final Map<Integer, Car> mediumCarsMap;
-    //Stores the details about list of large cars
+    //Stores the details about large cars
     private final Map<Integer, Car> largeCarsMap;
     private final CarReservationService carReservationService;
 
@@ -55,8 +55,8 @@ public class CarReservation {
 
     /**
      * This method is used to reserve a car for a customer. It only takes one reservation.
-     *
      * @param bookingDetails
+     * @param typeOfCar
      * @return
      */
     public Reservation reserveCar(BookingDetails bookingDetails, Constants.TYPE typeOfCar) {
@@ -88,8 +88,8 @@ public class CarReservation {
 
     /**
      * This methods books car for multiple non overlapping periods. This assumes that the List of Booking Details passed is valid and non
-     * overlapping date ranges. Does not check for that.
-     * This method is all or nothing. If any of the date range has a conflict with exiting booking for Car , none of the other dates get booked.
+     * overlapping date ranges and does not do validation for that.
+     * This method is all or nothing. If any of the date range has a conflict with exiting booking for that Car , none of the other dates get booked.
      * It also assumes that all the booking are for the same type of car <SMALL,MEDUIM,or LARGE>
      *
      * @param bookingDetailsList
@@ -128,7 +128,7 @@ public class CarReservation {
     }
 
     /**
-     * This method returns the car.
+     * This method is used for returning the car. It does not do any payment related stuff.
      *
      * @param reservation
      */

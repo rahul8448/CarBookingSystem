@@ -8,7 +8,7 @@ import java.util.List;
 
 
 /**
- * This car represents a Car. For this exercise we do not consider other charactertics of car like color make ,
+ * This class represents a Car. For this exercise we do not consider other charactertics of car like color make,
  * whether the car is a luxury car etc.
  */
 public class Car {
